@@ -1,42 +1,52 @@
-.cv-form{
-    background-color: navy;
-    border: 2px solid #000;
-    width: 400px;
-    color: #fff;
-    padding-left: 3rem;
-    padding-bottom: 3rem ;
-    height: 94vh;
-    overflow-y: scroll;
+.cv-form {
+  background-color: #d5b942;
+  width: 40%;
+  color: #fff;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  height: 94vh;
+  overflow-y: scroll;
 }
 
-label{
-    display: block;
+label {
+  display: block;
 }
 
-input{
-    width:80%;
-    margin:10x auto ;
-    border: #fff;
-    height: 1.5rem;
-    padding: 5px 12px;
+input,
+textarea {
+  width: 80%;
+  background-color: #e3de8f;
+  border: 1px solid #fff;
+  padding: 5px 12px;
 }
 
-textarea{
-    width: 80%;
-    height: 10rem;
+input:focus,
+textarea:focus {
+  background-color: #fff;
 }
 
-button{
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 120px;
-    font-size: 1rem;
-    padding: 0.5rem 0;
-    border-radius: 5%;
-    border: #000;
-    color: #000;
-    background-color: #bfcbc2;
-    cursor: pointer;
+input {
+  height: 1.5rem;
+}
+
+textarea {
+  height: 10rem;
+}
+
+button {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 120px;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  border-radius: 5%;
+  border: #000;
+  background-color: #bfcbc2;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fff;
 }

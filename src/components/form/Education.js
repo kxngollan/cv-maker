@@ -45,7 +45,7 @@ const Education = ({ onEdUpdate }) => {
             <p>{school.startDate}</p>
             <p>{school.endDate}</p>
             <p>{school.describe}</p>
-            <button type="button" onClick={deleteSchool}>
+            <button type="button" className="delete" onClick={deleteSchool}>
               delete
             </button>
           </div>
@@ -82,7 +82,7 @@ const Education = ({ onEdUpdate }) => {
       />
       <label htmlFor="startDate">Start Date:</label>
       <input
-        type="date"
+        type="text"
         name="startDate"
         value={newSchool.startDate}
         onChange={(e) => {
@@ -91,7 +91,7 @@ const Education = ({ onEdUpdate }) => {
       />
       <label htmlFor="endDate">End Date:</label>
       <input
-        type="date"
+        type="text"
         name="endDate"
         value={newSchool.endDate}
         onChange={(e) => {

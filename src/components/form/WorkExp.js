@@ -44,7 +44,7 @@ const WorkExp = ({ onWorkUpdate }) => {
             <p>{job.startDate}</p>
             <p>{job.endDate}</p>
             <p>{job.responsibilities}</p>
-            <button type="button" onClick={deletejob}>
+            <button type="button" className="delete" onClick={deletejob}>
               delete
             </button>
           </div>
@@ -73,7 +73,7 @@ const WorkExp = ({ onWorkUpdate }) => {
 
       <label htmlFor="startDate">Start Date:</label>
       <input
-        type="date"
+        type="text"
         name="startDate"
         value={NewJob.startDate}
         onChange={(e) => {
@@ -82,7 +82,7 @@ const WorkExp = ({ onWorkUpdate }) => {
       />
       <label htmlFor="endDate">End Date:</label>
       <input
-        type="date"
+        type="text"
         name="endDate"
         value={NewJob.endDate}
         onChange={(e) => {

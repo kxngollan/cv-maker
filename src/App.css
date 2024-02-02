@@ -1,13 +1,31 @@
-main{
-  display: flex; 
+body {
+  background-color: #000;
 }
-nav{
-text-align: center;
-text-decoration: underline;
-font-size: 1rem;
-height: 6vh;
+
+main {
+  display: flex;
+  color: #000;
 }
-nav h1{
-margin:8px 0 0 ;
+nav {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1rem;
+  height: 6vh;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+nav h1 {
+  margin: 8px 0 0;
   padding: 0;
+}
+
+.delete {
+  background-color: red;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.delete:hover {
+  background-color: salmon;
 }

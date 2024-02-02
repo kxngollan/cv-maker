@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 const Other = ({ onOtherUpdate }) => {
   const [others, setOthers] = useState([]);
   const [newOther, setNewOther] = useState({
+    title: "",
     name: "",
-    course: "",
-    grade: "",
     startDate: "",
     endDate: "",
     describe: "",
@@ -14,9 +13,8 @@ const Other = ({ onOtherUpdate }) => {
   const addOther = () => {
     setOthers([...others, newOther]);
     setNewOther({
+      title: "",
       name: "",
-      course: "",
-      grade: "",
       startDate: "",
       endDate: "",
       describe: "",
@@ -34,39 +32,63 @@ const Other = ({ onOtherUpdate }) => {
   }, [others, onOtherUpdate]);
 
   return (
-    <section className="education">
-      <h2>Education</h2>
+    <section className="other">
+      <h2>Other</h2>
+
       {others.map((other, index) => (
         <div key={index}>
+          <hr />
+          <p>{other.title}</p>
           <p>{other.name}</p>
-          <p>{other.course}</p>
-          <p>{other.grade}</p>
           <p>{other.startDate}</p>
           <p>{other.endDate}</p>
-          <p>{other.describe}</p>
-          <button type="button" onClick={() => deleteOther(index)}>
+          <button
+            type="button"
+            className="delete"
+            onClick={() => deleteOther(index)}
+          >
             delete
           </button>
         </div>
       ))}
       <hr />
-      <label htmlFor="other">Other title:</label>
+      <label htmlFor="title">Other title:</label>
       <input
         type="text"
-        name="other"
+        name="title"
         value={newOther.title}
         onChange={(e) => {
           setNewOther((prev) => ({ ...prev, title: e.target.value }));
         }}
       />
 
-      <label htmlFor="other">n:</label>
+      <label htmlFor="name">Name:</label>
       <input
         type="text"
-        name="other"
+        name="name"
         value={newOther.name}
         onChange={(e) => {
           setNewOther((prev) => ({ ...prev, name: e.target.value }));
+        }}
+      />
+
+      <label htmlFor="startDate">Start Date:</label>
+      <input
+        type="text"
+        name="startDate"
+        value={newOther.startDate}
+        onChange={(e) => {
+          setNewOther((prev) => ({ ...prev, startDate: e.target.value }));
+        }}
+      />
+
+      <label htmlFor="endDate">End Date:</label>
+      <input
+        type="text"
+        name="endDate"
+        value={newOther.endDate}
+        onChange={(e) => {
+          setNewOther((prev) => ({ ...prev, endDate: e.target.value }));
         }}
       />
 

@@ -34,7 +34,11 @@ const Skills = ({ onSkillUpdate }) => {
           return (
             <li key={index}>
               {skill}
-              <button type="button" onClick={() => deleteSkill(index)}>
+              <button
+                type="button"
+                className="delete"
+                onClick={() => deleteSkill(index)}
+              >
                 delete
               </button>
             </li>
