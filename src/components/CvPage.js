@@ -10,7 +10,7 @@ const CvPage = ({ personal, skills, education, work, other }) => {
           <p>{personal.email}</p>
           <p>{personal.phone}</p>
 
-          {personal.statement.length > 0 ? (
+          {personal.statement && personal.statement.length > 0 ? (
             <div className="statment">
               <h3>Personal Statement</h3>
               <hr />
