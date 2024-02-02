@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CvForm from "./components/CvForm";
+import CvPage from "./components/CvPage";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [personal, setPersonal] = useState({});
+  const [skills, setSkills] = useState([]);
+  const [education, setEducation] = useState([]);
+  const [work, setWork] = useState([]);
+  const [other, setOther] = useState([]);
+
+  const personalUpdate = (update) => {
+    setPersonal(update);
+  };
+
+  const skillUpdate = (update) => {
+    setSkills(update);
+  };
+
+  const edUpdate = (update) => {
+    setEducation(update);
+  };
+
+  const workUpdate = (update) => {
+    setWork(update);
+  };
+
+  const otherUpdate = (update) => {
+    setOther(update);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav>
+        <h1>Cv/Resume Maker</h1>
+      </nav>
+      <main>
+        <CvForm
+          personalUpdate={personalUpdate}
+          skillUpdate={skillUpdate}
+          edUpdate={edUpdate}
+          workUpdate={workUpdate}
+          otherUpdate={otherUpdate}
+        />
+        <CvPage
+          personal={personal}
+          skills={skills}
+          education={education}
+          work={work}
+          other={other}
+        />
+      </main>
+    </>
   );
-}
+};
 
 export default App;
