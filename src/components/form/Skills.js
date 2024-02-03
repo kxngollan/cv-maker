@@ -32,7 +32,7 @@ const Skills = ({ onSkillUpdate }) => {
       <ul>
         {skills.map((skill, index) => {
           return (
-            <li key={index}>
+            <li className="addedSkill" key={index}>
               {skill}
               <button
                 type="button"

@@ -91,7 +91,15 @@ const Other = ({ onOtherUpdate }) => {
           setNewOther((prev) => ({ ...prev, endDate: e.target.value }));
         }}
       />
-
+      <label htmlFor="describe">Describe:</label>
+      <textarea
+        type="text"
+        name="describe"
+        value={newOther.describe}
+        onChange={(e) => {
+          setNewOther((prev) => ({ ...prev, describe: e.target.value }));
+        }}
+      />
       <button type="button" onClick={addOther}>
         Add Other
       </button>

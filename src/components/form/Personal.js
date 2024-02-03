@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Personal.css";
 
 const Personal = ({ onPersonalUpdate }) => {
   const [personal, setPersonal] = useState({

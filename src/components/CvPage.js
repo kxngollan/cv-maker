@@ -75,8 +75,19 @@ const CvPage = ({ personal, skills, education, work, other }) => {
         ) : (
           ""
         )}
+        {other.map((item, index) => {
+          return (
+            <div className="other" key={index}>
+              <h2>{item.title}</h2>
+              <hr />
+              <p>{item.name}</p>
+              <p>{item.startDate}</p>
+              <p>{item.endDate}</p>
+              <p>{item.describe}</p>
+            </div>
+          );
+        })}
       </div>
-      <div className="other"></div>
     </section>
   );
 };
